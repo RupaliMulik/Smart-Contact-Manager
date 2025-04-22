@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scaler=1.0"/>
+		<title> </title>
+		
+	</head>
+	<body>
+		<h1>This is services page</h1>
+		<div th:replace="~{base::parent(~{::#main_content})}">
+			<section id="main_content">
+				<h1>this is dynamic services passed to base parent</h1>
+			</section>
+			
+		</div>
+	</body>
+</html>
