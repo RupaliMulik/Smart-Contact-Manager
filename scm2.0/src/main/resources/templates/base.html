@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="parent" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" th:fragment="parent(content,title,script)" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-		<tilte>Base Page</tilte>
+		<title data-th-replace="${title}">SCM</title>
+		<link rel="stylesheet" data-th-href="@{'/css/output.css'}"/>
+		<link
+			 href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	</head>
 	<body>
-		Base page Content
+		<!--common header-->
+		
+		<div data-th:replace="navbar:: navbar">
+			
+		</div>
+		
+		
+		<!--main content-->
+		<div class="p-4">
+		<section data-th-replace="${content}"></section>
+		</div>
+		<!--flow bite content-->
+		
+		<!--common footer-->
+		<footer class="p-4">
+			Footer:Build SCM With Rupali
+		</footer>
+		
+		<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+		<th:block data-th-replace="${script}"></th:block>
 	</body>
 </html>
