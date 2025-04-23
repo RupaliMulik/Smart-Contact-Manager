@@ -31,6 +31,27 @@ public class PageController {
 		System.out.println("Service Page Loading");
 		return "services";
 	}
+	
+	//contact page
+	@RequestMapping("/contact")
+	public String contact() {
+		System.out.println("Contact Page Loading");
+		return "contact";
+	}
+	
+	//login 
+	@RequestMapping("/login")
+	public String login() {
+		System.out.println("Login page loading");
+		return "login";
+	}
+	
+	//signup
+	@RequestMapping("/register")
+	public String register() {
+		System.out.println("Signup page loading");
+		return "register";
+	}
 
 }
 

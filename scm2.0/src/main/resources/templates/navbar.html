@@ -1,11 +1,39 @@
-<ul data-th-fragmet="navbar" class="p-4">
-			<li>
-				<a data-th-href="@{'/home'}">Home</a>
-			</li>
-			<li>
-				<a data-th-href="@{'/services'}">Services</a>
-			</li>
-			<li>
-				<a data-th-href="@{'/about'}">About</a>
-			</li>
-		</ul>
+<!-- Navbar Fragment -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900" data-th-fragment="navbar">
+  <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+    <!-- Logo -->
+    <a data-th-href="@{'/'}" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img data-th-src="@{'/images/callLogo.png'}" class="h-10 w-10 rounded-full shadow" alt="Logo" />
+      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">SCM2.0</span>
+    </a>
+
+    <!-- Menu (Horizontal Always) -->
+    <div class="flex items-center space-x-6">
+      <ul class="flex space-x-6 font-medium text-gray-900 dark:text-white">
+        <li><a data-th-href="@{'/home'}" class="hover:text-blue-700">Home</a></li>
+        <li><a data-th-href="@{'/about'}" class="hover:text-blue-700">About</a></li>
+        <li><a data-th-href="@{'/services'}" class="hover:text-blue-700">Services</a></li>
+        <li><a data-th-href="@{'/contact'}" class="hover:text-blue-700">Contact</a></li>
+      </ul>
+
+      <!-- Buttons -->
+      <div class="flex space-x-2 ml-6">
+        <a data-th-href="@{'/login'}"
+           class="text-white bg-gray-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+          Login
+        </a>
+        <a data-th-href="@{'/register'}"
+           class="text-white bg-gray-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+          Signup
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Footer Fragment -->
+<footer class="text-center mt-10 p-4 text-lg text-gray-700 dark:text-white" data-th-fragment="footer">
+  Footer:Build SCM With Rupali
+</footer>
+
+
